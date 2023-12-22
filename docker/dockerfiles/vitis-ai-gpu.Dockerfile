@@ -290,7 +290,7 @@ RUN if [[ ${VAI_CONDA_CHANNEL} =~ .*"tar.gz" ]]; then \
         && conda activate vitis-ai-tensorflow2 \
         && mamba install --no-update-deps -y vai_q_tensorflow2_gpu pydot pyyaml jupyter ipywidgets \
             dill progressbar2 pytest scikit-learn pandas matplotlib \
-            pillow -c conda-forge -c defaults \
+            pillow -c conda-forge -c anaconda \
         && export PATH=/opt/vitis_ai/conda/envs/vitis-ai-tensorflow2/bin:$PATH \
         && pip install -r /scratch/pip_requirements.txt \
         && pip install --ignore-installed tensorflow==2.8 keras==2.8 protobuf==3.11.* \
